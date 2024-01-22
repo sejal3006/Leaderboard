@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: black;
+    background: #fcfcfc;
+    font-weight: 300;
+    display: grid;
+    justify-content: center;
+    padding: 3em 0;
+    background: linear-gradient(rgb(202, 76, 44),lightgreen,blue);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+::placeholder{
+    color: rgb(49, 37, 37);
+}
+
+.main_title{
+    font-size: 1.5em;
+    width: 80%;
+    color:black;
+}
+
+.main_form{
+    display: grid;
+    gap: .6em;
+    justify-items: center;
+}
+
+input{
+    all: unset;
+    padding: .5em .8em;
+    width: 80%;
+    border: 1px solid rgb(7, 240, 228);
+    text-align: start;
+    color: #131313;
+}
+
+input:focus{
+    border: 3px solid rgb(251, 3, 255);
+}
+
+.main_error-prompter{
+    color: #fc0000;
+    font-weight: 700;
+    font-size: 1em;
+    display: none;
+}
+
+button:not(.main_form-submit-btn){
+    all: unset;
+    border-radius: 50%;
+    background: rgb(213, 209, 214);
+    width: 60px;
+    height: 60px;
+    transition: all .5s ease;
+}
+
+.main_form-submit-btn{
+    all: unset;
+    width: 10em;
+    background: rgb(72, 197, 22);
+    padding: .7em 0;
+    transition: all .5s ease;
+}
+
+button:active{
+    transform: scale(.95) translateY(5px);
+    filter: brightness(.9);
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+}
+
+.main_scoreboard{
+    display: grid;
+    justify-items: center;
+    gap: .3em;
+    width: 90%;
+    background: rgb(31, 186, 210);
+    text-transform: uppercase;
+    padding: 1em 0;
+}
+
+.player-name{
+    font-weight: 400;
+}
+
+.time-stamp{
+    color: #030303;
+    font-size: .8em;
+}
+
+.btn{
+    margin: 1em;
+    display: flex;
+    gap: .5em;
+}
+
+@media (min-width:35.25em){
+    .main_title{
+        font-size: 2.5rem;
+        font-weight: 500;
+        font-variant: small-caps;
+    }
+
+    .main_form{
+        display: flex;
+    }
+
+    .main_scoreboard{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    input{
+        width: 10em;
+    }
+
+}
